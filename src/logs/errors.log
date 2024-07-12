@@ -1,0 +1,114 @@
+error: pid invalid
+error: undefined
+error: undefined
+error: No recipients defined
+error: No recipients defined
+error: No recipients defined
+error: No recipients defined
+error: No recipients defined
+error: No recipients defined
+error: No recipients defined
+error: No recipients defined
+error: null
+error: null
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: null
+error: null
+error: users.foreach is not a function
+error: Error to create a user
+error: Error to create a user
+error: Error to create a user
+error: Error to create a user
+error: Error to create a user
+error: Error to create a user
+error: null
+error: query is not defined
+error: query is not defined
+error: prevLink is not defined
+error: res.sed is not a function
+error: Cannot read properties of undefined (reading 'user')
+error: Cannot read properties of undefined (reading 'user')
+error: Cannot read properties of undefined (reading 'email')
+error: Cannot read properties of undefined (reading 'email')
+error: Cannot read properties of undefined (reading 'email')
+error: cid invalid
+error: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "carts"
+error: cid invalid
+error: cid invalid
+error: cid invalid
+error: cid invalid
+error: cid invalid
+error: cid invalid
+error: cid invalid
+error: cid invalid
+error: null
+error: null
+error: null
+error: cid invalid
+error: null
+error: cid invalid
+error: cid invalid
+error: cid invalid
+error: cid invalid
+error: cartService is not defined
+error: null
+error: undefined
+error: undefined
+error: null
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: null
+error: null
+error: E11000 duplicate key error collection: ecommers.carts index: cartId_1 dup key: { cartId: null }
+error: E11000 duplicate key error collection: ecommers.carts index: cartId_1 dup key: { cartId: null }
+error: null
+error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-1fbb6a10936sm55450275ad.57 - gsmtp
+error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-1fbb6abfab9sm55460885ad.193 - gsmtp
+error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-1fbb6ac0fd1sm56890415ad.208 - gsmtp
+error: E11000 duplicate key error collection: ecommers.carts index: cartId_1 dup key: { cartId: null }
+error: E11000 duplicate key error collection: ecommers.carts index: cartId_1 dup key: { cartId: null }
+error: E11000 duplicate key error collection: ecommers.carts index: cartId_1 dup key: { cartId: null }
+error: E11000 duplicate key error collection: ecommers.carts index: cartId_1 dup key: { cartId: null }
+error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-70b438eb4e3sm6398940b3a.92 - gsmtp
+error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-70b4397f32csm6426801b3a.146 - gsmtp
+error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-1fbb6ab7fd3sm55592365ad.150 - gsmtp
+error: E11000 duplicate key error collection: ecommers.carts index: cartId_1 dup key: { cartId: null }
+error: res is not defined
+error: Cannot read properties of null (reading 'products')

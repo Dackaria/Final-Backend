@@ -1,19 +1,20 @@
-import 'dotenv/config'
+const dotenv = require("dotenv").config();
 
-export const {
-    PORT,
-    API_PREFIX,
-    DB_NAME,
-    DB_HOST,
-    DB_PORT,
-    MONGO_URI,
-    SECRET_SESSION,
-    GITHUB_CLIENT_ID,
-    GITHUB_CLIENT_SECRET,
-    SECRET_JWT,
-    PERSISTENCE,
-    GOOGLE_EMAIL,
-    GOOGLE_PSW,
-    TIME_EXPIRE_JWT_SESSION,
-    TIME_EXPIRE_JWT_CHANGE_PSW
-} = process.env;
+const config = {
+  SERVER: process.env.SERVER,
+  PORT: process.env.PORT || 3000,
+  MONGO_URL: process.env.MONGO_URL,
+  DB_NAME: process.env.DB_NAME,
+  PERSISTENCE: process.env.PERSISTENCE || "FS",
+  NODEMAILER_PASS: process.env.NODEMAILER_PASS,
+  NODEMAILER_GMAIL: process.env.NODEMAILER_GMAIL,
+  JWT_RESET_PASSWORD_KEY: process.env.JWT_RESET_PASSWORD_KEY,
+  PRIVATE_KEY: process.env.PRIVATE_KEY,
+  CLIENT_ID: process.env.CLIENT_ID,
+  CLIENT_SECRET: process.env.CLIENT_SECRET,
+  CALLBACK_URL: process.env.CALLBACK_URL,
+  PASS_COOKIE: process.env.PASS_COOKIE,
+  MODE: process.env.MODE || "production",
+};
+console.log('cookie', config.PASS_COOKIE);
+module.exports = config;

@@ -1,0 +1,59 @@
+<main class="container">
+  <button
+    type="button"
+    id="deleteAllUsers"
+    onclick="deleteAllUser()"
+    class="btn btn-dark my-3"
+  >
+    Delete All Users Inactive
+  </button>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Last name</th>
+        <th scope="col">Active</th>
+        <th scope="col">Rol</th>
+        <th scope="col">Options</th>
+      </tr>
+    </thead>
+    <tbody id="tbody">
+      {{#each users}}
+        <tr>
+          <td>{{this.first_name}}</td>
+          <td> {{this.last_name}}</td>
+          <td>
+            {{#unless this.isActive}}
+              <i class="bi bi-circle-fill text-success"></i>
+            {{else}}
+              <i class="bi bi-circle-fill text-danger"></i>
+            {{/unless}}
+          </td>
+          <td> {{this.role}}</td>
+          <td>
+
+            {{#if (isPremium this.role)}}
+
+              <button onclick="changeRole('{{this._id}}')" class="btn btn-info">
+                <i class="fs-4 bi bi-person-fill-down"></i>
+              </button>
+            {{else}}
+              <button
+                onclick="changeRole('{{this._id}}')"
+                class="btn btn-info disabled"
+              >
+                <i class="fs-4 bi bi-person-fill-down"></i>
+              </button>
+            {{/if}}
+            <button
+              onclick="deleteUser('{{this._id}}')"
+              class="btn btn-danger"
+            ><i class="fs-4 bi bi-trash"></i></button>
+          </td>
+        </tr>
+      {{/each}}
+
+    </tbody>
+  </table>
+</main>
+<script src="/js/paneladmin.js"></script>

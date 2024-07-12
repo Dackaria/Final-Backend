@@ -1,6 +1,6 @@
-import winston from "winston";
-
-const customLevelsOptions = {
+const winston = require("winston");
+const config = require("../config/config");
+const customLevelOptions = {
   levels: {
     fatal: 0,
     error: 1,
@@ -10,57 +10,64 @@ const customLevelsOptions = {
     debug: 5
   },
   colors: {
-    fatal: 'red',
-    error: 'magenta',
-    warning: 'yellow',
-    info: 'blue',
-    http: 'green',
-    debug: 'white'
+    fatal: "red",
+    error: "magenta",
+    warning: "yellow",
+    info: "blue",
+    http: "green",
+    debug: "white"
   }
-}
-
-// DEV LOGGER
+};
 const devLogger = winston.createLogger({
+  levels: customLevelOptions.levels,
   transports: [
     new winston.transports.Console({
       level: "debug",
       format: winston.format.combine(
-        winston.format.colorize({colors: customLevelsOptions.colors}),
+        winston.format.timestamp(),
+        winston.format.colorize({ colors: customLevelOptions.colors }),
         winston.format.simple()
       )
     }),
     new winston.transports.File({
-      filename: `errors-development.log`,
+      filename: "./src/logs/errors.log",
       level: "error",
-    }),
-  ],
+      format: winston.format.simple()
+    })
+  ]
 });
 
-
-// PROD LOGGER
 const prodLogger = winston.createLogger({
+  levels: customLevelOptions.levels,
   transports: [
     new winston.transports.Console({
       level: "info",
       format: winston.format.combine(
-        winston.format.colorize({colors: customLevelsOptions.colors}),
+        winston.format.timestamp(),
+        winston.format.colorize({ colors: customLevelOptions.colors }),
         winston.format.simple()
       )
     }),
     new winston.transports.File({
-      filename: `errors-production.log`,
+      filename:  "./src/logs/errors.log",
       level: "error",
-    }),
-  ],
+      format: winston.format.simple()
+    })
+  ]
 });
 
-// Implementation
-const loggersImplementation = {
-  development: devLogger,
-  production: prodLogger,
+const addLogger = (req, res, next) => {
+  if (config.MODE === "production") {
+    req.logger = prodLogger;
+  } else {
+    req.logger = devLogger;
+  }
+  req.logger.http(
+    `${req.method} in ${req.url} - at ${new Date().toLocaleDateString()} - ${new Date().toLocaleTimeString()}`
+  );
+  next();
 };
 
-export function dynamicLogger(req, res, next) {
-  req.logger = loggersImplementation[`${process.env.NODE_ENV}`];
-  next();
-}
+module.exports = {
+  addLogger
+};

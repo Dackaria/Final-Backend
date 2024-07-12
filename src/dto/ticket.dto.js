@@ -1,8 +1,9 @@
-export default class TicketDTO {
-    constructor(ticket) {
-        this.code = crypto.randomUUID();
-        this.purchase_datetime = Date.now();
-        this.amount = ticket.amount ?? 0;
-        this.purchaser = ticket.purchaser ?? "";
-    }
+class Ticket {
+  constructor(ticket) {
+    this.code = ticket.code;
+    this.amount = ticket.amount;
+    this.purchaser = ticket.purchaser;
+  }
 }
+
+module.exports = Ticket;
