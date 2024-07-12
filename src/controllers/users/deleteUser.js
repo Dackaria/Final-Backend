@@ -10,7 +10,7 @@ module.exports = async (req, res) => {
     await userService.delete(req.params.uid);
     await productService.deleteByOwner(user.email);
     await transport.sendMail({
-      from: "Admin <ferbeoulvedev@gmail.com>",
+      from: "Admin <fennix.ecommerce@gmail.com>",
       to: user.email,
       subject: "User Inactive",
       html: `

@@ -45,7 +45,7 @@ module.exports = async (req, res) => {
       ticketResponse = await ticketService.create(ticketResponse);
       ticketResponse = new TicketResponse(ticketResponse);
       const result = await transport.sendMail({
-        from: "Vendedor <ferbeoulvedev@gmail.com>",
+        from: "Vendedor <fennix.ecommerce@gmail.com>",
         to: req.query.email,
         subject: "Orden de compra",
         html: `

@@ -112,3 +112,5 @@ error: Invalid login: 535-5.7.8 Username and Password not accepted. For more inf
 error: E11000 duplicate key error collection: ecommers.carts index: cartId_1 dup key: { cartId: null }
 error: res is not defined
 error: Cannot read properties of null (reading 'products')
+error: Invalid login: 534-5.7.9 Application-specific password required. For more information, go to
+534 5.7.9  https://support.google.com/mail/?p=InvalidSecondFactor d9443c01a7336-1fbb6ad525asm71528235ad.304 - gsmtp

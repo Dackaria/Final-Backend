@@ -21,7 +21,7 @@ module.exports = async (req, res, next) => {
     const token = generateTokenResetPassword(userDB);
     //guardar token BD para poder eliminarlo despues de usarlo
     let result = await transport.sendMail({
-      from: "Recover Password <ferbeoulvedev@gmail.com>",
+      from: "Recover Password <fennix.ecommerce@gmail.com>",
       to: email,
       subject: "Recover password",
       html: `
