@@ -22,7 +22,7 @@ module.exports = async (req, res) => {
     }
     if (req.user.user.role === "admin" && product.owner !== "admin") {
       await transport.sendMail({
-        from: "Admin <ferbeoulvedev@gmail.com>",
+        from: "Admin <fennix.ecommerce@gmail.com>",
         to: product.owner,
         subject: "Product Deleted",
         html: `
